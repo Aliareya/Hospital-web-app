@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body{
+  background-color: aliceblue;
+}
+
+.bg-btn-gradient {
+  background-image: linear-gradient(to right, #6CC6B0 0%, #04A6CD 50%, #365BA9 100%);
+}
+
+.Toastify__toast {
+  @apply bg-gray-800 text-black font-semibold min-h-7;
+}
+
+.Toastify__toast--success {
+  @apply bg-green-500 text-black p-0 min-h-7 ;
+}
+
+.Toastify__toast--error {
+  @apply bg-red-500 text-black;
+}
+
+.Toastify__toast--info {
+  @apply bg-blue-500 text-black;
+}
+
+.Toastify__toast--warning {
+  @apply bg-yellow-500 text-black;
+}

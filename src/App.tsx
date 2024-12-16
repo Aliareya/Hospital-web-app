@@ -1,9 +1,18 @@
-const App = () => {
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Login from './Auth/Login';
+import SignUp from './Auth/SignUp';
+
+function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-red-900">Hello, Tailwind CSS!</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/signup' element={<SignUp/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
